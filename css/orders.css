@@ -1,0 +1,285 @@
+body {
+    background-color: rgb(243, 240, 245);    
+    font-size: 16px;
+}
+
+main {
+    display: flex;
+}
+
+.main-users {
+    width: 100%;
+    padding-top: 2%;
+    flex: 80%;
+}
+
+/* Стили формы */
+.block-users {
+    min-height: 350px;
+    min-width: 500px;
+    width: 80%;
+    padding: 2%;
+    padding-top: 10px;
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* Стили таблицы */
+.area-table {
+    width: 100%;
+	border-collapse: collapse;
+	border: 3px solid #161616;;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.area-title {
+	color: #161616;
+	font-weight: bold;
+	border: 2px solid #161616;
+	border-bottom: 3px solid #161616;
+	text-align: center;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+.area-text {
+	border: 2px solid #161616;
+	color: #161616;
+	padding: 0 10px;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+@media screen and (max-width: 1024px) {
+    .area-title, .area-text, .btn-users { 
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .area-title, .area-text, .btn-users { 
+        font-size: 0.8rem;
+    }
+}
+
+.area-center {
+	text-align: center;
+}
+
+.area-right {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.select-all {
+	margin-left: 10%;
+} 
+
+/* Стили кнопки */
+.btn-users {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #ad60d1;
+}
+
+/* Стили формы ввода */
+.input-users {
+	width: 100%;
+    border: none;
+}
+
+.title-area {
+    font-size: 22px; 
+    text-align: center;
+    color: #161616;
+}
+
+.footer {
+    position: absolute;
+	bottom: 0;
+}
+
+.pagination-block {
+    display: block;
+    text-align: center;
+    /* margin: 20px; */
+    bottom: 5px;
+    margin-top: 20px;
+}
+  
+.page {
+    color: #1d1d1d;
+    float: center;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.page:hover, .page:active {
+    text-decoration: none;
+    color: #1d1d1d;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.link-ID {
+	color: black;
+	text-decoration: none;
+}
+
+.link-ID:focus, .link-ID:hover  {
+	color: black;
+	text-decoration: underline;
+}
+
+.active {
+    font-weight: 700;
+}
+
+.select-status {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    outline: none; 
+    border: none;
+    text-align: center;
+    background-color: rgb(250, 250, 250);
+}
+
+.selects-areas {
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+.select-area {
+    margin: 0 auto;
+    width: 200px;
+}
+
+.area-block {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.block-check {
+    text-align: center;
+    justify-content: center;   
+}
+  
+.accept {
+    padding: 10px;
+    background-color: rgba(19, 150, 14, 0.719);
+    color: #f8eff8;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.check {
+    z-index: 1;
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    opacity: 0;
+    animation: radio 10s forwards;
+}
+
+@-webkit-keyframes radio {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes radio {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.check .radio {	
+    -webkit-animation: radio 10s;
+    animation: radio 10s;
+}
+
+@-webkit-keyframes radio {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes radio {
+    from {opacity: 1;}
+    to {opacity:0 ;}
+}
+
+.not-result {
+    text-align: center;
+}
+
+.text-not-result {
+    color: #1f1f1f;
+    font-size: 20px;
+}
+
+.btn-products {
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #ad60d1;
+}
+
+.all-area {
+    font-size: 16px; 
+    float: right;
+    color: #161616;
+}
+
+.link-area {
+    text-decoration: none;
+    color: #161616;
+    font-weight: 600;
+}
+
+.link-area:hover, .link-area:active {
+    text-decoration: underline;
+    color: #161616;
+    font-weight: 600;
+}
+
+.link-sort {
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+.link-sort:hover {
+    font-weight: 700;
+    color: #1d1d1d;
+}
