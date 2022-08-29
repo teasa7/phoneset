@@ -1,0 +1,24 @@
+{
+  "name": "phoneset",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homePage": "https://teasa7.github.io/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teasa7/phoneset.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teasa7/phoneset/issues"
+  },
+  "homepage": "https://github.com/teasa7/phoneset#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
