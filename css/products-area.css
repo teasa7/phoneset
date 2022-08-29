@@ -1,0 +1,313 @@
+body {
+    background-color: rgb(243, 240, 245);    
+    font-size: 16px;
+}
+
+main{
+    display: flex;
+}
+
+.main-products {
+    width: 100%;
+    padding-top: 2%;
+    flex: 80%;
+}
+
+/* Стили формы */
+.block-products { 
+    min-height: 350px;
+    min-width: 500px;
+    width: 97%;
+    padding: 2%;
+    padding-top: 10px;
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+/* Стили формы ввода */
+.input-products {
+	width: 100%;
+    border: none;
+    background-color: rgba(157, 199, 141, 0);
+}
+
+.title-area {
+    font-size: 22px; 
+    text-align: center;
+    color: #161616;
+} 
+
+.all-area {
+    font-size: 16px; 
+    float: right;
+    color: #161616;
+}
+
+.link-area {
+    text-decoration: none;
+    color: #161616;
+    font-weight: 600;
+}
+
+.link-area:hover, .link-area:active {
+    text-decoration: underline;
+    color: #161616;
+    font-weight: 600;
+}
+
+/* Стили кнопки */
+.btn-products {
+    margin-top: 50%;
+    align-items: center;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #ad60d1;
+}
+
+/* Стили таблицы */
+.area-table {
+    width: 100%;
+	border-collapse: collapse;
+	border: 3px solid #161616;;
+	margin-left: auto;
+	margin-right: auto;
+    word-wrap: break-word;
+}
+
+.area-title:first-child, .area-text:nth-child(2) {
+    width: 3%;
+    text-align: center;
+    justify-content: center;
+}
+
+.area-title {
+	color: #161616;
+	font-weight: bold;
+	border: 2px solid #161616;
+	border-bottom: 3px solid #161616;
+	text-align: center;
+    font-size: 1rem;
+    word-wrap: break-word;
+    width: 12%;
+}
+
+.area-text {
+	border: 2px solid #161616;
+	color: #161616;
+	padding: 0 10px;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+.area-title:nth-child(2), .area-text:nth-child(3) {
+    width: 15%;
+}
+
+@media screen and (max-width: 1024px) {
+    .area-title, .area-text, .btn-users { 
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .area-title, .area-text, .btn-users { 
+        font-size: 0.7rem;
+    }
+}
+
+.link-ID {
+	color: black;
+	text-decoration: none;
+}
+
+.link-ID:focus, .link-ID:hover  {
+	color: black;
+	text-decoration: underline;
+}
+
+.pagination-block {
+    display: block;
+    text-align: center;
+    /* margin: 20px; */
+    bottom: 5px;
+    margin-top: 20px;
+}
+  
+.page {
+    color: #1d1d1d;
+    float: center;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
+    padding: 10px 15px;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.page:hover, .page:active {
+    text-decoration: none;
+    color: #1d1d1d;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.select-product {
+    min-width: 200px;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    outline: none; 
+    border: none;
+    text-align: center;
+    background-color: rgb(250, 250, 250);
+}
+
+.block-check {
+    text-align: center;
+    justify-content: center;   
+}
+  
+.error {
+    padding: 10px;
+    background-color: rgb(177, 10, 10);
+    color: #f8eff8;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accept {
+    padding: 10px;
+    background-color: rgb(18, 150, 14);
+    color: #f8eff8;
+    font-size: 16px;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.check {
+    z-index: 1;
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    opacity: 0;
+    animation: radio 10s forwards;
+}
+
+@-webkit-keyframes radio {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes radio {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.check .radio {	
+    -webkit-animation: radio 10s;
+    animation: radio 10s;
+}
+
+@-webkit-keyframes radio {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes radio {
+    from {opacity: 1;}
+    to {opacity:0 ;}
+}
+
+.check2 {
+    z-index: 1;
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    opacity: 0;
+    animation: radio2 10s forwards;
+}
+
+@-webkit-keyframes radio2 {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes radio2 {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.check2 .radio2 {	
+    -webkit-animation: radio2 10s;
+    animation: radio2 10s;
+}
+
+@-webkit-keyframes radio2 {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes radio2 {
+    from {opacity: 1;}
+    to {opacity:0 ;}
+}
+
+.area-center {
+	text-align: center;
+}
+
+.link-sort {
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+.link-sort:hover {
+    font-weight: 700;
+    color: #1d1d1d;
+}
+
+.selects-products {
+    margin: 0 auto;
+    width: 400px;
+}
+
+.select-products {
+    margin: 0 auto;
+    width: 180px;
+}
+
+.active {
+    font-weight: 700;
+}
+
+.not-result-two {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.text-not-result-two {
+    color: #1f1f1f;
+    font-size: 20px;
+}

@@ -1,0 +1,141 @@
+CREATE TABLE topics_questions (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    topic_question VARCHAR(256) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE countries (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    country VARCHAR(256) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE brands (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    brand VARCHAR(256) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE models (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    ID_brand int(11) NOT NULL,
+    model VARCHAR(256) NOT NULL,
+    year_release YEAR NOT NULL,
+    ID_country int(11) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE users (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    name VARCHAR(50) NOT NULL,
+    surname VARCHAR(100) NOT NULL,
+    user_photo LONGBLOB,
+    email VARCHAR(256) NOT NULL,
+    phone VARCHAR(12),
+    `password` VARCHAR(500) NOT NULL,
+    `right` VARCHAR(50) NOT NULL,
+    registration_date DATE NOT NULL,  
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE products (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    title VARCHAR(100) NOT NULL,
+    ID_model int(11) NOT NULL,
+    weight int(50),
+    price int(100) NOT NULL,
+    discount int(10),
+    date_price DATE NOT NULL,
+    orders int(200),  
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE orders (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    ID_user int(11) NOT NULL,
+    ID_products int(11) NOT NULL,
+    `count` int(11) NOT NULL,
+    payment VARCHAR(50) NOT NULL,
+    date_order DATE NOT NULL,
+    order_code VARCHAR(50) NOT NULL,
+    status_price VARCHAR(50) NOT NULL, 
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE reviews (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    ID_orders int(11) NOT NULL,
+    ID_products int(11) NOT NULL,
+    dignity VARCHAR(100),
+    limitations VARCHAR(100),
+    `text` VARCHAR(300),
+    grade int(10) NOT NULL,
+    date_creation DATE NOT NULL, 
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE images_reviews (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    ID_reviews int(11) NOT NULL,
+    image_review LONGBLOB,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE favorites (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    ID_user int(11) NOT NULL,
+    ID_product int(11) NOT NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE questions (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    ID_user int(11) NOT NULL,
+    ID_product int(11) NOT NULL,
+    question VARCHAR(200) NOT NULL,
+    ID_topics int(11) NOT NULL,
+    answer VARCHAR(200),
+    date_question DATE NOT NULL,
+    date_answer DATE,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE images (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    ID_product int(11) NOT NULL,
+    image LONGBLOB NOt NULL,
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE specifications (
+    ID int(11) NOT NULL AUTO_INCREMENT, 
+    ID_ptoduct int(11) NOT NULL,
+    guarantee int(10),
+    back_color VARCHAR(50) NOT NULL,
+    front_color VARCHAR(50),
+    edge_color VARCHAR(50) NOT NULL,
+    sim_format VARCHAR(50) NOT NULL,
+    count_sim int(10) NOT NULL,
+    screen_diagonal DOUBLE NOT NULL, 
+    screen_resolution VARCHAR(50) NOT NULL,
+    body_material VARCHAR(50) NOT NULL,
+    OS_version VARCHAR(50),
+    processor_model VARCHAR(50), 
+    count_cores int(10),
+    battery VARCHAR(50) NOT NULL,
+    RAM int(10) NOT NULL,
+    built_in int(10) NOT NULL,
+    type_cards VARCHAR(50), 
+    count_cameras int(10) NOT NULL,
+    main_camera int(10) NOT NULL,
+    front_camera int(10) NOT NULL,
+    Bluetooth VARCHAR(50), 
+    Wi_fi VARCHAR(50), 
+    NFS VARCHAR(50),
+    wire_type VARCHAR(50), 
+    equipment VARCHAR(100), 
+    width DOUBLE,
+    height DOUBLE,
+    thickness DOUBLE,
+    PRIMARY KEY (ID)
+);

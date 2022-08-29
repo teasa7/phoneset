@@ -1,0 +1,40 @@
+.accept-center {
+	width: 100%;
+	margin-top: 20%;
+	margin-bottom: 25%;
+    text-align: center;
+}
+
+.accept-product {
+	text-align: center;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.btn-accept {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    width: 25%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2f631c;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-order {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+    width: 15%;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    background-color: #888888;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
